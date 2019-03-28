@@ -1,0 +1,198 @@
+
+<head>
+	<link rel="stylesheet" type="text/css" href="style.css">
+	<script type="text/javascript" src="jquery.js"></script>
+	<script type="text/javascript" src="script.js"></script>
+	<title>JudgeTools</title>
+	<link rel="icon" href="icon.png">
+</head>
+
+<body>
+<div id="header"></div>
+<div id="main">
+<div id="sidenav">
+		<aside>
+		<ul>
+			<li><a href="#be-a-judge"> </a></li>
+			<li><a href="#jar"> </a></li>
+			<li>Layers</li>
+			<li>State Based Actions</li>
+		</ul>
+		</aside>
+	</div>
+
+
+
+
+<div id="container">
+	<div id="be-a-judge">
+		<h2>So you want to be a judge?</h2>
+		<p>This might seem like a daunting task at first, but the procedure is really quite straightforward. You'll have to:</p>
+			<ul>
+				<li><b>Pass an exam</b>
+				Your exam must be administered by a certified Level 2 judge. In order to be eligible for writing the exam, you will need to have passed a Level 1 Practice exam. More on this below.
+				</li>
+				<li><b>Judge 2 events under supervision.</b>These need to be within 6 months of each other, and should preferably be at Regular REL.</li>
+				<li><b>Do an interview with a certified judge.</b>They will write you a letter of reccomendation, which will be tied to your DCi number.</li>
+			</ul>
+	</div>
+
+<div id="exam">
+	<h2>The Exam</h2>
+	<p>This is the meaty part of becoming a judge, but don't be intimidated! You don't need to read the Comprehensive Rules Document, though feel free to do so if you're up to the challenge. If you have a mentor they should help you through the studying process, but there are a few key areas you should focus on.</p>
+
+	<div id="exam-steps">
+		<button id="jarBtn">Judging at Regular</button>
+			<div id="jarContent">
+				<button class="smallBtn" id="jarPhilosophyBtn">Philosophy</button>
+					<div  id="jarPhilosophy">
+						Most Magic™ players play for fun and see a tournament as a social event. Regular REL (Rules Enforcement
+						Level) encourages a welcoming atmosphere and friendly competition. As judges, we should be friendly and
+						involved, sometimes playing in events ourselves. Like players, we are encouraged to help at appropriate
+						times, such as during deck construction or between matches. Judges are the last word when a dispute or
+						question arises, and we should be as impartial and diplomatic as possible. <br><br>
+						Magic is a complicated game and mistakes occur. While we can’t prevent players from making mistakes, we
+						can do our best to fix the situation as fairly as possible. It is important that players know that when help is
+						needed or something goes wrong, calling a judge is the best course of action. Focus on educating the players
+						and keeping the game going rather than worrying about the impact on the game. You should intervene if you
+						see something illegal happen in a match, but beyond this you have a lot of room to tailor your actions. For
+						example, whether you step in when you see a player miss a trigger should be determined by the tone you
+						want to strike for your event – it may be appropriate to provide this extra help in a more causal environment,
+						but not appropriate if your play group is more competitive.<br><br>
+						When answering a question, don't be afraid to double check the rules if you aren't sure of your answer and
+						give the players extra time at the end of their match to compensate. If a player accidentally breaks a rule,
+						apply the best remedy described below (intentionally breaking a rule is a Serious Problem). If your situation
+						isn’t covered here, use common sense to make the best ruling you can. The fixes found in other documents
+						(such as the Infraction Procedure Guide) are designed for a stricter environment and don't apply at Regular
+						REL. In addition to fixing the error, it is important to remind the players to play more carefully. Avoid being
+						heavy-handed as you want to keep your events fun and relaxed. A player continuing to make the same
+						mistake despite repeated reminders may be warned that the next occurrence will result in a Game Loss.
+						Hopefully this final step will not be required, but knowing it is possible should get the player to correct their
+						behavior.<br><br>
+						If your event requires decklists, provides large prizes, or is otherwise of a more competitive nature, it may be
+						better to run it at Competitive rather than Regular REL. This will require use of the full Infraction Procedure
+						Guide instead of this document, so make sure you're familiar with it before trying a higher REL.
+					</div>
+				<button class="smallBtn" id="jarCommonBtn">Common Issues</button>
+					<div id="jarCommon">
+												Common Issues
+						A player forgets a triggered ability (one that uses the words “when,” “whenever,” or “at” usually at the
+						start of the ability's text).
+						These abilities are considered missed if the player did not acknowledge them in any way at the point that it
+						required choices or had a visible in-game effect. If the ability includes the word “may,” assume the player
+						chose not to perform it. Otherwise, add it to the stack now unless it happened so long ago that you think it
+						would be very disruptive to the game - don’t add the ability to the stack if significant decisions having been
+						made based on the effect not happening! Unlike other game rule errors (which must be pointed out), players
+						are never required to point out their opponent’s missed triggered abilities, although they may do so.<br><br>
+						A player sees a card in a library that he or she shouldn’t have seen
+						This is easily fixed by shuffling the card seen into the unknown portion of the library. Make sure to check if
+						any player knows of any cards in the library (because an effect sent them to the bottom, for example), and
+						ensure your fix preserves those cards.<br><br>
+						A player accidentally draws more cards than he or she was supposed to
+						If the identity of the card(s) were known to all players, return them to their proper location. Otherwise,
+						determine how many extra cards have been drawn, take that many cards at random from the player’s hand
+						and place them on top of the library. If the extra cards were drawn while drawing the opening hand, shuffle
+						the extra cards back into the deck instead and allow the player to continue making mulligan decisions.<br><br>
+						A player makes an in-game error not mentioned above
+						This will cover the bulk of player errors, and we will usually leave the game as it is. Fix anything that is
+						currently illegal (e.g. an Aura enchanting an illegal permanent) and continue the game. If the error was
+						caught quickly and rewinding is relatively easy, you may choose to undo all the actions back to the point that
+						the illegal action happened. This can include returning random cards from the hand to the library to undo
+						card draws (though don't shuffle the library if you do this) and reversing various other actions (such as
+						untapping permanents and declaring attackers or blockers). Don't go crazy with this!<br><br>
+						A player has illegal, insufficient, or another player’s cards in his or her deck
+						Remove any cards that shouldn’t be there and put back any cards that should. Then, if the deck contains
+						insufficient cards, add basic lands of the player’s choice to bring it to the correct size. Any cards that are
+						added to the deck should be shuffled directly into the library. If the error was discovered during a draw effect,
+						have the player complete the draw effect after the deck is fixed and shuffled. Encourage players to count their
+						deck and present their sideboard (face down) to their opponents before starting a game.
+					</div>
+
+				<button class="smallBtn" id="jarUnwantedBtn">General Unwanted Behaviors</button>
+					<div id="jarUnwanted">
+						Players taking unreasonable amounts of time sideboarding or making play decisions.
+						 Inadequate shuffling.
+						 Asking for or providing strategic advice during a match or draft.
+						 Tardiness.
+						Educating players who exhibit these behaviors should be your primary motivation as a judge. It can be useful
+						to reinforce this education with more stern penalties should a player's unwanted behaviour continue,
+						especially in cases where players are likely to upset others. A player that is more than 10 minutes late to a
+						match is considered to have forfeited the match and should be dropped at the end of round if he or she is still
+						absent.
+						If you have warned a player who may be upsetting others and your warning has not curbed their behaviour,
+						or if a player is being threatening or aggressive, these situations are Serious Problems.
+					</div>
+
+				<button class="smallBtn" id="jarSeriousBtn">Serious Problems</button>
+					<div id="jarSerious">
+						Certain actions will not be tolerated under any circumstances. Every effort should be made to educate players
+						before and during events; however, ignorance is not an acceptable defence of these actions. Any player
+						engaging in the following must be removed from your event and, at the Organizer's discretion, removed from
+						the venue entirely:
+						 Aggressive, violent or abusive behavior (physical or verbal).
+						 Intentionally and knowingly breaking or letting an opponent break game or tournament rules, or
+						lying. (“Bluffing” about cards opponents can't normally see is permitted).
+						 Determining match outcomes by incentives, coercion, or outside-the-game methods, or gambling on
+						any part of a tournament.
+						 Theft (including things like replacing a card in a draft with one from a player’s binder).
+						Removing players in this way is called a Disqualification, and we must always try to educate our players on
+						why these actions are unacceptable. Also let the player know that while your decision is final, the Judge
+						Program would still like to hear his or her side of the story. You can contact your local Regional Coordinator,
+						high level Judge, or WPN Representative to guide you through the process of a Disqualification.
+					</div>
+
+			</div>
+
+
+
+
+
+
+
+
+		<button id="layerBtn">Layers</button>
+				<div id="layerContent">Lorem ipsum dolor sit amet, consectetur adipisicing elit, sed do eiusmod
+				tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam,
+				quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo
+				consequat. Duis aute irure dolor in reprehenderit in voluptate velit esse
+				cillum dolore eu fugiat nulla pariatur. Excepteur sint occaecat cupidatat non
+				proident, sunt in culpa qui officia deserunt mollit anim id est laborum.
+			</div>
+
+		<button id="sbaBtn">State Based Actions</button>
+		<div id="sbaContent">Lorem ipsum dolor sit amet, consectetur adipisicing elit, sed do eiusmod
+		tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam,
+		quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo
+		consequat. Duis aute irure dolor in reprehenderit in voluptate velit esse
+		cillum dolore eu fugiat nulla pariatur. Excepteur sint occaecat cupidatat non
+		proident, sunt in culpa qui officia deserunt mollit anim id est laborum.</div>
+		<button id="turnBtn">Turn Structure</button>
+		<div id="turnContent">Lorem ipsum dolor sit amet, consectetur adipisicing elit, sed do eiusmod
+		tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam,
+		quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo
+		consequat. Duis aute irure dolor in reprehenderit in voluptate velit esse
+		cillum dolore eu fugiat nulla pariatur. Excepteur sint occaecat cupidatat non
+		proident, sunt in culpa qui officia deserunt mollit anim id est laborum.</div>
+		<button id="mechBtn">Key Mechanics</button>
+		<div id="mechContent">Lorem ipsum dolor sit amet, consectetur adipisicing elit, sed do eiusmod
+		tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam,
+		quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo
+		consequat. Duis aute irure dolor in reprehenderit in voluptate velit esse
+		cillum dolore eu fugiat nulla pariatur. Excepteur sint occaecat cupidatat non
+		proident, sunt in culpa qui officia deserunt mollit anim id est laborum.</div>
+	</div>
+</div>
+
+<h2>Mentorship and Supervision</h2>
+Judging your supervised events, passing the interview, and having the exam administered all require contact with a certified judge in your community. The best way to get through all these things is to find a judge to mentor you.
+Visit [fb] to get in touch with judges in the region, or contact one of our regional coordinators at [place].
+
+<h2>Important Resources</h2>
+JudgeApps, more test places, blog, fb group, etc
+
+</div>
+</div>
+
+
+
+</body>
