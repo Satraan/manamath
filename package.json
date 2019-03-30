@@ -1,9 +1,10 @@
 {
-  "name": "judge-tools",
+  "name": "manamath",
   "version": "0.1.0",
   "private": true,
   "dependencies": {
     "classnames": "^2.2.6",
+    "node-sass": "^4.11.0",
     "onsenui": "^2.10.6",
     "react": "^16.8.5",
     "react-dom": "^16.8.5",

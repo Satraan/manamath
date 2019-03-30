@@ -6,26 +6,32 @@ class Slider extends Component {
     turn:this.props.turn
   }
 
+
+
   sliderHandler = (event) => {
 
     var value = event.target.value;
-    value = value/20;
+    value = value/14;
     value = Math.round(value);
+    this.props.addTurns(value, this.props.color)
 
    this.setState({
       turn: value
     })
   }
 
+  buttonHandler = (event) => {
+    console.log(event.target.dataset.symbols)
+  }
+
   render (){
     return (
-      <div className={this.props.classes}>
-          <Fab ripple={true}>
-           <Icon icon='fa-twitter' size={26} fixedWidth={false} style={{verticalAlign: 'middle'}} />
+      <div className={'slider ' + this.props.color}>
+          <Fab ripple={true} data-symbols="0" onClick={this.buttonHandler}>
          </Fab>
          {this.state.turn}
           <Range modifier="material"
-            value={(this.state.turn)*20}
+            value={(this.state.turn)*14}
             onChange={this.sliderHandler}
             />
       </div>

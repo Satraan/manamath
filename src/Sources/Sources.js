@@ -43,48 +43,11 @@ class Sources extends Component {
     render() {
       return (
         <div className="ui container main">
-          {
-            this.props.hasWhite ?
             <SourceCounter classes="ui button white" present={this.state.white.present}/>
-            :null
-          }
-          {
-            this.props.hasBlue ?
             <SourceCounter classes="ui button blue" present={this.state.blue.present}/>
-            :null
-          }
-          {
-            this.props.hasBlack ?
             <SourceCounter classes="ui button black" present={this.state.black.present}/>
-            :null
-          }
-          {
-            this.props.hasRed ?
             <SourceCounter classes="ui button red" present={this.state.red.present}/>
-            : null
-          }
-          {
-            this.props.hasGreen ?
             <SourceCounter classes="ui button green" present={this.state.green.present}/>
-            : null
-          }
-          <hr/>
-          {
-            this.props.hasWhite ?
-              this.props.hasRed ? <button onClick={this.addMultiSource} data-color1="white" data-color2="red">Add 1 red & 1 white</button> :null
-
-            :null
-          }
-
-
-
-          <button onClick={this.addSource} data-color="black">Add 1 black</button>
-          <button onClick={this.addSource} data-color="red">Add 1 red</button>
-          {
-            this.props.hasRed && this.props.hasBlue ?
-            <button onClick={this.addMultiSource} data-color1="red" data-color2="blue">Add 1 red & 1 blue</button>
-            :null
-          }
         </div>
       );
     }
