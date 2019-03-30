@@ -1,14 +1,14 @@
 
-
-
 import React, { Component } from 'react';
-import './App.css';
+import { Segment } from 'react-onsenui';
+import './App.scss';
 import './semantic.css';
-import './style.css';
+import './style.scss';
 import 'onsenui/css/onsenui.css';
 import 'onsenui/css/onsen-css-components.css';
 import SourceCounter from './SourceCounter/SourceCounter';
 import Slider from './Slider/Slider.js';
+import DeckSelector from './Buttons/DeckSelector';
 class App extends Component {
 
   sourceMatrix = {
@@ -53,8 +53,6 @@ class App extends Component {
         })
 
     }
-
-    //Turns will be 1-5
     addTurns = (data, color) => {
       this.setState({
         [color] : {required: this.state[color].required,
@@ -63,19 +61,26 @@ class App extends Component {
       })
       this.calculate(color);
     }
-
     addSymbols = (data, color) => {
       this.setState({
-        [color] : {required: this.state[color].required,
-                    turn:this.state[color].turn,
-                    symbols:data}
+        [color] : {required:this.sourceMatrix[this.state.deckSize]
+                  [this.state[color].symbols][this.state[color].symbols]
+                  [this.state[color].turn],
+                  turn:this.state[color].turn,
+                  symbols:data}
       })
-      this.calculate(color);
+    }
+
+    addDeckSize = (data, color) => {
+      this.setState({
+        deckSize:data
+      })
     }
 
     render() {
       return (
         <div className="App">
+
         <SourceCounter classes="ui button white" present={this.state.white.required}/>
         <SourceCounter classes="ui button blue" present={this.state.blue.required}/>
         <SourceCounter classes="ui button black" present={this.state.black.required}/>
@@ -87,7 +92,14 @@ class App extends Component {
         <Slider addTurns={this.addTurns} color="black" turn={this.state.black.turn}/>
         <Slider addTurns={this.addTurns} color="red" turn={this.state.red.turn}/>
         <Slider addTurns={this.addTurns} color="green" turn={this.state.green.turn}/>
-
+        <hr/>
+        <div className="deckSegment">
+        <Segment modifier="material">
+           <button data-decksize="limited">   40</button>
+           <button data-decksize="constructed">   60</button>
+           <button data-decksize="edh">   99</button>
+        </Segment>
+        </div>
         </div>
       );
     }

@@ -1,0 +1,33 @@
+.App {
+  text-align: center;
+  padding: 1em;
+}
+
+.slider {
+  padding: 0.75em 1em;
+  .fab {
+    margin-right: 20px;
+    background-size: cover;
+  }
+
+  &.white .fab {
+      background-image: url('./themes/default/assets/images/white.svg');
+  }
+  &.blue .fab {
+    background-image: url('./themes/default/assets/images/blue.svg');
+  }
+  &.black .fab {
+    background-image: url('./themes/default/assets/images/black.svg');
+  }
+  &.red .fab {
+    background-image: url('./themes/default/assets/images/red.svg');
+  }
+  &.green .fab {
+    background-image: url('./themes/default/assets/images/green.svg');
+  }
+}
+
+.deckSegment button{
+  padding:1em 2em;
+  margin: 0 0.5em;
+}
