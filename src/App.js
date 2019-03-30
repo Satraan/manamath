@@ -9,6 +9,7 @@ import 'onsenui/css/onsen-css-components.css';
 import SourceCounter from './SourceCounter/SourceCounter';
 import Slider from './Slider/Slider.js';
 import DeckSelector from './Buttons/DeckSelector';
+import TabBar from './TabBar/TabBar';
 class App extends Component {
 
   sourceMatrix = {
@@ -72,7 +73,7 @@ class App extends Component {
     }
 
     handleSegmentChange = (event) => {
-      console.log(event.target.value)
+      console.log(event.target)
       var result;
       switch(event.target.value) {
         case '0':
@@ -88,9 +89,21 @@ class App extends Component {
           return
       }
 
+      var activeSegments = document.getElementsByClassName('active');
+      console.log(activeSegments)
+      if (activeSegments.length > 0) {
+        activeSegments[0].classList.remove("active");
+      }
+
+      (event.target).classList.add("active");
+
+
+
+
       this.setState({
         deckSize:result
       })
+
 
 
     }
@@ -99,36 +112,33 @@ class App extends Component {
       return (
         <div className="App">
 
-        <SourceCounter classes="ui button white" present={this.sourceMatrix[this.state.deckSize]
-            [this.state.white.symbols][this.state.white.symbols]
-            [this.state.white.turn]}/>
-        <SourceCounter classes="ui button blue" present={this.sourceMatrix[this.state.deckSize]
-            [this.state.blue.symbols][this.state.blue.symbols]
-            [this.state.blue.turn]}/>
-        <SourceCounter classes="ui button black" present={this.sourceMatrix[this.state.deckSize]
-            [this.state.black.symbols][this.state.black.symbols]
-            [this.state.black.turn]}/>
-        <SourceCounter classes="ui button red" present={this.sourceMatrix[this.state.deckSize]
-            [this.state.red.symbols][this.state.red.symbols]
-            [this.state.red.turn]}/>
-        <SourceCounter classes="ui button green" present={this.sourceMatrix[this.state.deckSize]
-            [this.state.green.symbols][this.state.green.symbols]
-            [this.state.green.turn]}/>
-        <hr/>
-        <Slider addSymbols={this.addSymbols} addTurns={this.addTurns} color="white" turn={this.state.white.turn}/>
-        <Slider addSymbols={this.addSymbols} addTurns={this.addTurns} color="blue" turn={this.state.blue.turn}/>
-        <Slider addSymbols={this.addSymbols} addTurns={this.addTurns} color="black" turn={this.state.black.turn}/>
-        <Slider addSymbols={this.addSymbols} addTurns={this.addTurns} color="red" turn={this.state.red.turn}/>
-        <Slider addSymbols={this.addSymbols} addTurns={this.addTurns} color="green" turn={this.state.green.turn}/>
-        <hr/>
-        <div className="deckSegment">
-
-        <Segment onClick={this.handleSegmentChange} modifier="material">
-           <button>   40</button>
-           <button>   60</button>
-           <button>   99</button>
-        </Segment>
-        </div>
+          <SourceCounter classes="ui button white" present={this.sourceMatrix[this.state.deckSize]
+              [this.state.white.symbols][this.state.white.symbols]
+              [this.state.white.turn]}/>
+          <SourceCounter classes="ui button blue" present={this.sourceMatrix[this.state.deckSize]
+              [this.state.blue.symbols][this.state.blue.symbols]
+              [this.state.blue.turn]}/>
+          <SourceCounter classes="ui button black" present={this.sourceMatrix[this.state.deckSize]
+              [this.state.black.symbols][this.state.black.symbols]
+              [this.state.black.turn]}/>
+          <SourceCounter classes="ui button red" present={this.sourceMatrix[this.state.deckSize]
+              [this.state.red.symbols][this.state.red.symbols]
+              [this.state.red.turn]}/>
+          <SourceCounter classes="ui button green" present={this.sourceMatrix[this.state.deckSize]
+              [this.state.green.symbols][this.state.green.symbols]
+              [this.state.green.turn]}/>
+          <Slider addSymbols={this.addSymbols} addTurns={this.addTurns} color="white" turn={this.state.white.turn}/>
+          <Slider addSymbols={this.addSymbols} addTurns={this.addTurns} color="blue" turn={this.state.blue.turn}/>
+          <Slider addSymbols={this.addSymbols} addTurns={this.addTurns} color="black" turn={this.state.black.turn}/>
+          <Slider addSymbols={this.addSymbols} addTurns={this.addTurns} color="red" turn={this.state.red.turn}/>
+          <Slider addSymbols={this.addSymbols} addTurns={this.addTurns} color="green" turn={this.state.green.turn}/>
+          <div className="deckSegment">
+            <Segment onClick={this.handleSegmentChange} modifier="material">
+               <button>   40</button>
+               <button>   60</button>
+               <button>   99</button>
+            </Segment>
+          </div>
         </div>
       );
     }
