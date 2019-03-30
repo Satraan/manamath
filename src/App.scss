@@ -11,23 +11,40 @@
   }
 
   &.white .fab {
+    &[data-symbols="1"]{
       background-image: url('./themes/default/assets/images/white.svg');
+
+    }
   }
   &.blue .fab {
-    background-image: url('./themes/default/assets/images/blue.svg');
+    &[data-symbols="1"]{
+      background-image: url('./themes/default/assets/images/blue.svg');
+      
+    }
   }
   &.black .fab {
-    background-image: url('./themes/default/assets/images/black.svg');
+    &[data-symbols="1"]{
+      background-image: url('./themes/default/assets/images/black.svg');
+
+    }
   }
   &.red .fab {
-    background-image: url('./themes/default/assets/images/red.svg');
+    &[data-symbols="1"]{
+      background-image: url('./themes/default/assets/images/red.svg');
+    }
   }
   &.green .fab {
-    background-image: url('./themes/default/assets/images/green.svg');
+    &[data-symbols="1"]{
+      background-image: url('./themes/default/assets/images/green.svg');
+    }
   }
 }
 
-.deckSegment button{
+
+
+.deckSegment button, .deckSegment input{
   padding:1em 2em;
   margin: 0 0.5em;
+  color: black;
+
 }

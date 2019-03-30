@@ -19,7 +19,7 @@ class Slider extends Component {
 
   buttonHandler = (event) => {
     var symbols = parseInt(event.target.dataset.symbols)
-    if (symbols==3) {
+    if (symbols===3) {
       symbols = 0
       event.target.dataset.symbols = symbols
       this.props.addSymbols(symbols, this.props.color)
@@ -36,9 +36,8 @@ class Slider extends Component {
   render (){
     return (
       <div className={'slider ' + this.props.color}>
-          <Fab ripple={true} data-symbols={0} onClick={this.buttonHandler}>
+          <Fab ripple={true} className={this.props.color} data-symbols={0} onClick={this.buttonHandler}>
          </Fab>
-         {this.state.turn}
           <Range modifier="material"
             value={(this.state.turn)*14}
             onChange={this.sliderHandler}
