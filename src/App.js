@@ -1,6 +1,6 @@
 
 import React, { Component } from 'react';
-import { Segment } from 'react-onsenui';
+import { Segment, BackButton, Icon, Page, Toolbar, ToolbarButton } from 'react-onsenui';
 import './App.scss';
 import './semantic.css';
 import './style.scss';
@@ -112,33 +112,55 @@ class App extends Component {
       return (
         <div className="App">
 
-          <SourceCounter classes="ui button white" present={this.sourceMatrix[this.state.deckSize]
-              [this.state.white.symbols][this.state.white.symbols]
-              [this.state.white.turn]}/>
-          <SourceCounter classes="ui button blue" present={this.sourceMatrix[this.state.deckSize]
-              [this.state.blue.symbols][this.state.blue.symbols]
-              [this.state.blue.turn]}/>
-          <SourceCounter classes="ui button black" present={this.sourceMatrix[this.state.deckSize]
-              [this.state.black.symbols][this.state.black.symbols]
-              [this.state.black.turn]}/>
-          <SourceCounter classes="ui button red" present={this.sourceMatrix[this.state.deckSize]
-              [this.state.red.symbols][this.state.red.symbols]
-              [this.state.red.turn]}/>
-          <SourceCounter classes="ui button green" present={this.sourceMatrix[this.state.deckSize]
-              [this.state.green.symbols][this.state.green.symbols]
-              [this.state.green.turn]}/>
+        <Toolbar>
+
+              <div className="center">
+                ManaMath
+              </div>
+              <div className="right">
+                <ToolbarButton>
+                  <Icon icon="md-menu" />
+                </ToolbarButton>
+              </div>
+            </Toolbar> }
+
+          <div className="deckSegment">
+
+
+
+              <Segment onClick={this.handleSegmentChange} modifier="material">
+                 <button>   40</button>
+                 <button>   60</button>
+                 <button>   99</button>
+              </Segment>
+
+          </div>
+
           <Slider addSymbols={this.addSymbols} addTurns={this.addTurns} color="white" turn={this.state.white.turn}/>
           <Slider addSymbols={this.addSymbols} addTurns={this.addTurns} color="blue" turn={this.state.blue.turn}/>
           <Slider addSymbols={this.addSymbols} addTurns={this.addTurns} color="black" turn={this.state.black.turn}/>
           <Slider addSymbols={this.addSymbols} addTurns={this.addTurns} color="red" turn={this.state.red.turn}/>
           <Slider addSymbols={this.addSymbols} addTurns={this.addTurns} color="green" turn={this.state.green.turn}/>
-          <div className="deckSegment">
-            <Segment onClick={this.handleSegmentChange} modifier="material">
-               <button>   40</button>
-               <button>   60</button>
-               <button>   99</button>
-            </Segment>
+
+
+      <div className="result">
+            <SourceCounter classes="ui button white" present={this.sourceMatrix[this.state.deckSize]
+                [this.state.white.symbols][this.state.white.symbols]
+                [this.state.white.turn]}/>
+            <SourceCounter classes="ui button blue" present={this.sourceMatrix[this.state.deckSize]
+                [this.state.blue.symbols][this.state.blue.symbols]
+                [this.state.blue.turn]}/>
+            <SourceCounter classes="ui button black" present={this.sourceMatrix[this.state.deckSize]
+                [this.state.black.symbols][this.state.black.symbols]
+                [this.state.black.turn]}/>
+            <SourceCounter classes="ui button red" present={this.sourceMatrix[this.state.deckSize]
+                [this.state.red.symbols][this.state.red.symbols]
+                [this.state.red.turn]}/>
+            <SourceCounter classes="ui button green" present={this.sourceMatrix[this.state.deckSize]
+                [this.state.green.symbols][this.state.green.symbols]
+                [this.state.green.turn]}/>
           </div>
+
         </div>
       );
     }

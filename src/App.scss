@@ -1,3 +1,4 @@
+
 .App {
   height: auto;
   text-align: center;
@@ -61,13 +62,9 @@
   }
 }
 
-
-
 .deckSegment ons-segment{
-
+  margin-top: 40px;
   width: 85%;
-
-  margin-top: 3em;
 
   input.active + div{
     color:black;
@@ -87,7 +84,7 @@
 
     padding:1em 2em;
     margin: 0 0.5em;
-    color: black;
+
     div {
       font-size: 16px;
     }
@@ -95,4 +92,8 @@
   .segment--material__button {
     background-color:transparent!important;
   }
+}
+
+.result {
+  margin-top: 1.5em;
 }

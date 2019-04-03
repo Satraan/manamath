@@ -1,5 +1,6 @@
 import React, { Component } from 'react';
 import { Range, Fab } from 'react-onsenui';
+import ButtonBar from '../ButtonBar/ButtonBar';
 
 class Slider extends Component {
   state = {
@@ -38,10 +39,7 @@ class Slider extends Component {
       <div className={'slider ' + this.props.color}>
           <Fab ripple={true} className={this.props.color} data-symbols={0} onClick={this.buttonHandler}>
          </Fab>
-          <Range modifier="material"
-            value={(this.state.turn)*14}
-            onChange={this.sliderHandler}
-            />
+          <ButtonBar />
       </div>
     )
   }
