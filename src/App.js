@@ -9,7 +9,6 @@ import 'onsenui/css/onsen-css-components.css';
 import SourceCounter from './SourceCounter/SourceCounter';
 import Slider from './Slider/Slider.js';
 import DeckSelector from './Buttons/DeckSelector';
-import TabBar from './TabBar/TabBar';
 class App extends Component {
 
   sourceMatrix = {
